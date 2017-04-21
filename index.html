@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
-  <meta name="description" content="Описание страницы для поисковика">
-  <meta name="application-name" content="Коллекция блоков"> <!-- Название ярлыка -->
+  <meta name="description" content="Библиотека БЭМ-блоков Анастасии Васиной, предназначенная для частного использования">
+  <meta name="application-name" content="Библиотека блоков"> <!-- Название ярлыка -->
   <!-- saved from url=(0014)about:internet -->
-  <title>Коллекция блоков</title>
+  <title>Библиотека блоков</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="img/sprite.js"></script>
 
   <!-- Фавиконки с сайта http://www.favicomatic.com/ -->
   <link href="img/favicons/favicon.ico" rel="icon" type="image/x-icon">
@@ -34,7 +35,76 @@
   <meta name="msapplication-wide310x150logo" content="img/favicons/mstile-310x150.png">
   <meta name="msapplication-square310x310logo" content="img/favicons/mstile-310x310.png">
 </head>
+
 <body>
+  <!-- SVG sprite включен -->
+  <div class="svg-placeholder"
+    style="border: 0; clip: rect(0 0 0 0); height: 1px;
+      margin: -1px; overflow: hidden; padding: 0;
+      position: absolute; width: 1px;"></div>
+  <script>
+    document.querySelector(".svg-placeholder").innerHTML = SVG_SPRITE;
+  </script>
+
+  <!-- Вставка в любое место сайта -->
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" class="i">
+    <use xlink:href="#icon"></use>
+  </svg> -->
+
+  <div class="page__wrapper">
+    <!-- Шапка -->
+    <header class="page-title">
+      <h1>Библиотека БЭМ-блоков</h1>
+    </header>
+
+    <!-- Блоки -->
+    <main class="page-content">
+
+      <!-- page -->
+      <section class="lib-block">
+        <h2 class="lib-block__title">Страница</h2>
+        <p class="lib-block__description"><code>html</code> задаем класс <code>.page</code> и на него записываем глобальные стили страницы.</p>
+        <ul class="lib-block__list">
+          <li class="lib-block__list-item"></li>
+          <li class="lib-block__list-item"></li>
+          <li class="lib-block__list-item"></li>
+        </ul>
+      </section>
+
+      <!-- Текстовые блоки -->
+      <section class="lib-block">
+        <h2 class="lib-block__title">Текстовые блоки</h2>
+        <p class="lib-block__description">С помощью <code>flexbox</code> можно регулировать высоту блоков с текстом и расстояние между отдельными фрагментами внутри.</p>
+
+        <!-- post -->
+        <div class="post  lib-block__example">
+          <div class="post__item">
+            <p class="post__item-title">
+              <span class="post__item-user">Мария</span>
+              (5 часов назад)
+            </p>
+            <p class="post__item-message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <p class="post__item-likes">Нравится: 356</p>
+          </div>
+
+          <div class="post__item">
+              <p class="post__item-title">
+                <span class="post__item-user">Антон</span>
+                (12 часов назад)
+              </p>
+              <p class="post__item-message">Соседи будут рады!</p>
+              <p class="post__item-likes">Нравится: 666</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="page-footer">
+      <address class="author">© Проект Васиной Анастасии</address>
+    </footer>
+  </div>
 
   <script type="text/javascript" src="js/script.min.js"></script>
 </body>

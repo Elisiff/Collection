@@ -13,6 +13,7 @@ let rename = require("gulp-rename"); //Переименовываем файлы
 let imagemin = require("gulp-imagemin"); //Сжимаем изображения
 let spritesmith = require("gulp.spritesmith"); //Спрайт png
 let svgstore = require("gulp-svgstore"); //Спрайт svg
+let svg2string = require("gulp-svg2string"); //Подключение svg через js
 let svgmin = require("gulp-svgmin");  //Сжатие svg
 let server = require("browser-sync").create();
 let run = require("run-sequence");
@@ -21,7 +22,7 @@ let del = require("del"); //Очистка папки
 
 // Sass
 gulp.task("scss", function() {
-  gulp.src("sass/style.scss")
+  gulp.src("sass/global/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -77,6 +78,7 @@ gulp.task("sprite-svg", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
+    .pipe(svg2string())  //Чтобы сделать файл sprite.svg, нужно закомментировать эту строчку
     .pipe(gulp.dest("img"));
 });
 
@@ -99,7 +101,7 @@ gulp.task("serve", ["scss"], function() {
 
 // Gulp-sass для build
 gulp.task("style", function() {
-  gulp.src("sass/style.scss")
+  gulp.src("sass/global/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -154,6 +156,7 @@ gulp.task("symbols-svg", function() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
+    .pipe(svg2string())  //Чтобы сделать файл sprite.svg, нужно закомментировать эту строчку
     .pipe(gulp.dest("build/img"));
 });
 
