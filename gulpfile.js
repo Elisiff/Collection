@@ -39,17 +39,9 @@ gulp.task("scss", function() {
     .pipe(server.stream());
 });
 
-// Сборка js-файлов блоков
-gulp.task("blocks", function () {
-  gulp.src("sass/**/*.js")
-    .pipe(plumber())
-    .pipe(concat("blocks.js"))
-    .pipe(gulp.dest("js"));
-});
-
 // Сборка и минификация JS
 gulp.task("js", function () {
-  gulp.src("js/*.js")
+  return gulp.src("sass/**/*.js")
     .pipe(plumber())
     .pipe(concat("script.js"))
     .pipe(minifyjs())
@@ -99,8 +91,7 @@ gulp.task("serve", ["scss"], function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["scss"]);
-  gulp.watch("sass/**/*.js", ["blocks"]);
-  gulp.watch("js/*.js", ["js"]);
+  gulp.watch("sass/**/*.js", ["js"]);
   gulp.watch("*.html").on("change", server.reload);
 });
 
@@ -125,17 +116,9 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"));
 });
 
-// Сборка js-файлов блоков для build
-gulp.task("js-blocks", function () {
-  gulp.src("sass/**/*.js")
-    .pipe(plumber())
-    .pipe(concat("blocks.js"))
-    .pipe(gulp.dest("js"));
-});
-
 // Сборка и минификация JS для build
 gulp.task("js-mini", function () {
-  gulp.src("js/*.js")
+  return gulp.src("sass/**/*.js")
     .pipe(plumber())
     .pipe(concat("script.js"))
     .pipe(minifyjs())
@@ -196,8 +179,7 @@ gulp.task("serv", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("sass/**/*.js", ["js-blocks"]);
-  gulp.watch("js/*.js", ["js-mini"]);
+  gulp.watch("sass/**/*.js", ["js-mini"]);
   gulp.watch("*.html", ["html:update"]);
 });
 
@@ -220,5 +202,5 @@ gulp.task("clean", function() {
 });
 
 gulp.task("build", function(fn) {
-  run("clean", "copy", "style", "js-blocks", "js-mini", "images", "symbols-png", "symbols-svg", fn);
+  run("clean", "copy", "style", "js-mini", "images", "symbols-png", "symbols-svg", fn);
 });
