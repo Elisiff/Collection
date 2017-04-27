@@ -1,0 +1,28 @@
+.lib-block {
+  position: relative;
+  flex-grow: 1;
+  padding: 0 50px;
+  margin-bottom: 20px;
+  border: 4px inset #BFBFBF;
+}
+
+.lib-block__title {
+  padding: 0;
+  padding-bottom: 10px;
+}
+
+.lib-block__name {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 12px;
+  left: -15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #7B7474;
+  transform: rotate(-90deg);
+}
+
+.lib-block__list {
+  padding-left: 25px;
+}
