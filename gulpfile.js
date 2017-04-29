@@ -45,6 +45,7 @@ gulp.task("js", function () {
   return gulp.src("sass/**/*.js")
     .pipe(plumber())
     .pipe(concat("script.js"))
+    .pipe(gulp.dest("js"))
     .pipe(minifyjs())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("js"));
@@ -123,6 +124,7 @@ gulp.task("js-mini", function () {
   return gulp.src("sass/**/*.js")
     .pipe(plumber())
     .pipe(concat("script.js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(minifyjs())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"));

@@ -10,7 +10,7 @@
   <!-- saved from url=(0014)about:internet -->
   <title>Библиотека блоков</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="img/sprite.js"></script>
+  <!-- <script src="img/sprite.js"></script> -->
 
   <!-- Фавиконки с сайта http://www.favicomatic.com/ -->
   <link href="img/favicons/favicon.ico" rel="icon" type="image/x-icon">
@@ -38,13 +38,13 @@
 
 <body>
   <!-- SVG sprite включен -->
-  <div class="svg-placeholder"
+  <!-- <div class="svg-placeholder"
     style="border: 0; clip: rect(0 0 0 0); height: 1px;
       margin: -1px; overflow: hidden; padding: 0;
       position: absolute; width: 1px;"></div>
   <script>
     document.querySelector(".svg-placeholder").innerHTML = SVG_SPRITE;
-  </script>
+  </script> -->
 
   <!-- Вставка в любое место сайта -->
   <!-- <svg xmlns="http://www.w3.org/2000/svg" class="i">
@@ -82,9 +82,10 @@
         <h2 class="lib-block__title">Текстовые блоки</h2>
         <p class="lib-block__name">.post</p>
         <p class="lib-block__description">С помощью <code>flexbox</code> можно регулировать высоту блоков с текстом и расстояние между отдельными фрагментами внутри.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
 
         <!-- post -->
-        <div class="post  lib-block__example">
+        <div class="post  lib-block__example  lib-block__example--closed">
           <div class="post__item">
             <p class="post__item-title">
               <span class="post__item-user">Мария</span>
