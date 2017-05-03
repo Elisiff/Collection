@@ -1,6 +1,7 @@
 // Текст
-@mixin text($font-family, $font-size, $line-height, $color: null) {
-  font-family: $font-family;
+@mixin text($font-weight, $font-style, $font-size, $line-height, $color: null) {
+  font-weight: $font-weight;
+  font-style: $font-style;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;

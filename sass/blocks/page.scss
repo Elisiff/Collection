@@ -10,8 +10,8 @@
   min-width: 320px;
   min-height: 100%;
   box-sizing: border-box;
-  font-size: 18px; // Оформление этой страницы
-  line-height: 25px; // Оформление этой страницы
+  font-family: $ptsans;
+  @include text(400, normal, 18px, 25px);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Убираем подсветку ссылок и JS-элементов в WebKit на мобильных платформах
   -ms-overflow-style: scrollbar; // Фиксированный скроллбар
   -ms-text-size-adjust: 100%; // Задаем правильное масштабирование текста для IE на мобильных устройствах
@@ -60,7 +60,7 @@ main,
 nav,
 section,
 summary {
-display: block;
+  display: block;
 }
 
 //Оформление этой страницы
@@ -74,5 +74,6 @@ display: block;
 }
 
 code {
+  font-family: $ptsans; //некоторые браузеры ставят свой шрифт
   background-color: #E7E7E7;
 }
