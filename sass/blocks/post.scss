@@ -1,0 +1,36 @@
+.post {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.post__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 5px 20px 5px;
+  padding: 8px 25px 10px 25px;
+  width: 300px;
+  border: 1px solid #BFBFBF;
+  background-color: #ffffff;
+}
+
+.post__item-title {
+  font-weight: 700;
+}
+
+.post__item-user {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.post__item-message {
+  min-height: 60px;
+  color: #283645;
+}
+
+.post__item-likes {
+  margin-top: auto;
+  padding-top: 10px;
+  color: #a5a5a5;
+}
