@@ -506,7 +506,6 @@ code {
       flex-direction: column; }
 
 .lib-block {
-  position: relative;
   -ms-flex-positive: 1;
       flex-grow: 1;
   padding: 0 50px 15px 50px;
@@ -515,18 +514,28 @@ code {
 
 .lib-block__title {
   padding: 0;
-  padding-bottom: 10px; }
+  padding-bottom: 20px;
+  margin-bottom: 0; }
+
+.lib-block__paragraph {
+  padding: 10px 0 20px 0;
+  margin: 0; }
 
 .lib-block__name {
-  position: absolute;
-  width: auto;
-  height: auto;
-  top: 12px;
-  left: -15px;
+  display: block;
+  max-width: 120px;
+  padding: 0;
+  margin: 0;
+  height: 0;
   font-size: 1.25rem;
   font-weight: bold;
   color: #7B7474;
-  transform: rotate(-90deg); }
+  background-color: transparent;
+  transform: translate(-100px, -40px) rotate(-90deg); }
+
+.lib-block__description {
+  padding: 0;
+  margin-top: 0; }
 
 .lib-block__list {
   padding-left: 25px; }
@@ -588,6 +597,13 @@ code {
   margin-top: auto;
   padding-top: 10px;
   color: #a5a5a5; }
+
+.burger {
+  width: 50px;
+  height: 4px;
+  margin-bottom: 20px;
+  background-color: #000000;
+  box-shadow: 0 10px 0 0 #000000, 0 20px 0 0 #000000; }
 
 .page-footer {
   padding: 40px 0 20px 0; }
