@@ -128,19 +128,63 @@
         <h2 class="lib-block__title">Фигуры на CSS</h2>
         <h3 class="lib-block__paragraph">Бургер</h3>
         <p class="lib-block__name">.burger</p>
-        <p class="lib-block__description">Описание</p>
+        <p class="lib-block__description">Бургер (кнопка) состоит из одной полоски (псевдоэлемента) высотой 4px и длиной 50px и двух аналогичных теней-полосок. Наведение производится на контейнер элемента.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
 <!-- burger -->
-        <div class="lib-block__example  lib-block__example--show">
-          <div class="burger">
+        <div class="lib-block__example  lib-block__example--closed">
+          <button type="button" class="burger">Открыть
+          </button>
+        </div>
+
+        <h3 class="lib-block__paragraph">Крестик</h3>
+        <p class="lib-block__name">.cross</p>
+        <p class="lib-block__description">Крестик (кнопка) состоит из двух полосок-псевдоэлементов. Наведение производится на контейнер элемента.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- cross -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <button type="button" class="cross">Закрыть
+          </button>
+        </div>
+
+        <h3 class="lib-block__paragraph">Квадрат</h3>
+        <p class="lib-block__name">.square</p>
+        <p class="lib-block__description">Квадрат (<code>&lt;div&gt;</code> или <code>&lt;span&gt;</code>) часто используется в качестве индикатора чекбокса.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- square -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <div class="square">
           </div>
+        </div>
+
+        <h3 class="lib-block__paragraph">Круг</h3>
+        <p class="lib-block__name">.circle</p>
+        <p class="lib-block__description">Круг (<code>&lt;div&gt;</code> или <code>&lt;span&gt;</code>) часто используется в качестве индикатора радио-кнопки.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- circle -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <div class="circle">
+          </div>
+        </div>
+
+        <h3 class="lib-block__paragraph">Загрузчик</h3>
+        <p class="lib-block__name">.loader</p>
+        <p class="lib-block__description">Загрузчик (<code>&lt;div&gt;</code> или <code>&lt;span&gt;</code>) создан с помощью круга (трехцветного) и анимации.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- loader -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <span class="loader">
+          </span>
         </div>
       </section>
 
-      <!-- Основная навигация -->
+<!-- Основная навигация -->
       <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
+        <h2 class="lib-block__title">Основная навигация</h2>
         <h3 class="lib-block__paragraph">Пункт</h3>
         <p class="lib-block__name">.класс</p>
         <p class="lib-block__description">Описание</p>
@@ -291,7 +335,7 @@
       </section>
 
 
-      <!-- Загрузка файла (+загрузчик) -->
+      <!-- Загрузка файла -->
       <section class="lib-block">
         <h2 class="lib-block__title">Название</h2>
         <h3 class="lib-block__paragraph">Пункт</h3>

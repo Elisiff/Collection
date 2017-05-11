@@ -1,0 +1,38 @@
+.cross {
+  position: relative;
+  display: block;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 5px;
+    background-color: $bg-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before, &::after {
+      background-color: $bg-pink;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.circle {
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: $bg-white;
+  border-radius: 50%;
+  border: 2px solid $bg-black;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $bg-gray;
+  }
+
+  &:active {
+    border: 2px solid $bg-pink;
+  }
+}

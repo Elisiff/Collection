@@ -1,0 +1,26 @@
+.loader {
+  display: inline-block;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #C0C0C0;
+    border-top: 3px solid #A0A0A0;
+    border-right: 3px solid #A9A9A9;
+    border-radius: 50%;
+    animation: loader-rotate 1s linear infinite;
+  }
+}
+
+@keyframes loader-rotate {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
