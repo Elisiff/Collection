@@ -1,3 +1,4 @@
+// Выпадающее меню
 var subitems = document.querySelector(".drop-down-nav__subitems");
 
 subitems.classList.remove("drop-down-nav__subitems--nojs");
@@ -20,6 +21,7 @@ if (subitems !== null) {
   });
 }
 
+// Интерактивное меню
 var navMain = document.querySelector(".int-nav");
 var navToggle = document.querySelector(".int-nav__toggle");
 
@@ -37,6 +39,7 @@ if (navToggle !== null) {
   });
 }
 
+// Примеры-спойлеры
 var spoiler = document.querySelectorAll(".lib-block__spoiler");
 var example = document.querySelectorAll(".lib-block__example");
 

@@ -1,3 +1,4 @@
+// Интерактивное меню
 var navMain = document.querySelector(".int-nav");
 var navToggle = document.querySelector(".int-nav__toggle");
 

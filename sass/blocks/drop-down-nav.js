@@ -1,3 +1,4 @@
+// Выпадающее меню
 var subitems = document.querySelector(".drop-down-nav__subitems");
 
 subitems.classList.remove("drop-down-nav__subitems--nojs");

@@ -1,3 +1,4 @@
+// Примеры-спойлеры
 var spoiler = document.querySelectorAll(".lib-block__spoiler");
 var example = document.querySelectorAll(".lib-block__example");
 
