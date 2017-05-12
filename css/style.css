@@ -508,7 +508,7 @@ code {
 .lib-block {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  padding: 0 50px 15px 50px;
+  padding: 0 50px 15px 58px;
   margin-bottom: 20px;
   border: 4px inset #BFBFBF; }
 
@@ -531,7 +531,7 @@ code {
   font-weight: bold;
   color: #7B7474;
   background-color: transparent;
-  transform: translate(-108px, -20px) rotate(-90deg); }
+  transform: translate(-114px, -20px) rotate(-90deg); }
 
 .lib-block__description {
   padding: 0;
@@ -992,13 +992,64 @@ code {
 .drop-down-nav__subitems--closed {
   display: none; }
 
-.drop-down-nav__subitems--opened {
+.drop-down-nav__subitems--opened, .drop-down-nav__subitems--nojs {
   display: -ms-flexbox;
   display: flex; }
 
 .drop-down-nav__submenu:hover .drop-down-nav__subitems {
   display: -ms-flexbox;
   display: flex; }
+
+.breadcrumbs {
+  padding: 0;
+  list-style: none;
+  margin: 5px 0; }
+
+.breadcrumbs__item {
+  display: inline-block;
+  margin-right: 5px;
+  white-space: nowrap; }
+  .breadcrumbs__item:not(:last-child):after {
+    content: ">";
+    display: inline-block;
+    margin-left: 13px;
+    color: #283645; }
+
+.breadcrumbs__link {
+  color: #202020;
+  text-decoration: none; }
+  .breadcrumbs__link:hover, .breadcrumbs__link:focus {
+    color: #d22856;
+    text-decoration: none; }
+  .breadcrumbs__link--active {
+    color: #7f7e7e; }
+    .breadcrumbs__link--active:hover, .breadcrumbs__link--active:focus {
+      color: #7f7e7e; }
+
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.pagination__item {
+  display: block;
+  padding: 10px;
+  min-width: 50px;
+  border: 1px solid #7f7e7e;
+  text-decoration: none;
+  text-align: center;
+  color: #202020; }
+  .pagination__item + .pagination__item {
+    border-left: 0; }
+  .pagination__item:hover, .pagination__item:focus {
+    text-decoration: none;
+    color: #202020;
+    background-color: #ffffff; }
+  .pagination__item--active {
+    background-color: #ffffff; }
+  .pagination__item--disable:hover, .pagination__item--disable:focus {
+    background-color: #E7E7E7; }
 
 .page-footer {
   padding: 40px 0 20px 0; }

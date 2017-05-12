@@ -209,10 +209,10 @@
 
         <h3 class="lib-block__paragraph">Выпадающее меню</h3>
         <p class="lib-block__name">.drop-down-nav</p>
-        <p class="lib-block__description">Описание</p>
+        <p class="lib-block__description">Выпадающее подменю реализуется на js (если нужно изменить пункт меню, к которому привязано подменю, то js следует вешать на него).</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- drop-down-nav -->
+<!-- drop-down-nav -->
         <div class="lib-block__example  lib-block__example--closed">
           <nav class="drop-down-nav">
             <ul class="drop-down-nav__items">
@@ -220,7 +220,7 @@
               <li class="drop-down-nav__item"><a href="#">Фотографии</a></li>
               <li class="drop-down-nav__item"><a href="#">Отзывы</a></li>
               <li class="drop-down-nav__item  drop-down-nav__submenu"><a href="#">О компании</a>
-                <ul class="drop-down-nav__subitems  drop-down-nav__subitems--closed">
+                <ul class="drop-down-nav__subitems  drop-down-nav__subitems--closed  drop-down-nav__subitems--nojs">
                   <li class="drop-down-nav__subitem"><a href="#">История</a></li>
                   <li class="drop-down-nav__subitem"><a href="#">Акции</a></li>
                   <li class="drop-down-nav__subitem"><a href="#">Местоположение</a></li>
@@ -230,47 +230,44 @@
             </ul>
           </nav>
         </div>
-      </section>
 
-
-      <!-- Хлебные крошки -->
-      <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
+        <h3 class="lib-block__paragraph">Хлебные крошки</h3>
+        <p class="lib-block__name">.breadcrumbs</p>
+        <p class="lib-block__description">Хлебные крошки реализованы списком, скобки-стрелки — псевдоэлементами.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+<!-- breadcrumbs -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">О компании</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link  breadcrumbs__link--active">Акции</a></li>
+          </ul>
+        </div>
 
+        <h3 class="lib-block__paragraph">Пагинация</h3>
+        <p class="lib-block__name">.pagination</p>
+        <p class="lib-block__description">Пагинация — это блок ссылок и псевдоссылок с модификаторами <code>--active</code> или <code>--disable</code>.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- pagination -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <div class="pagination">
+            <a href="#" class="pagination__item">1</a>
+            <a class="pagination__item  pagination__item--disable">...</a>
+            <a href="#" class="pagination__item">5</a>
+            <a class="pagination__item  pagination__item--active">6</a>
+            <a href="#" class="pagination__item">7</a>
+            <a class="pagination__item  pagination__item--disable">...</a>
+            <a href="#" class="pagination__item">99</a>
           </div>
         </div>
       </section>
 
-
-      <!-- Пагинация -->
+      <!-- Изображения -->
       <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
-        <button class="lib-block__spoiler" type="button">Пример</button>
-
-        <!-- класс -->
-        <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Картинки-миниатюры -->
-      <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
+        <h2 class="lib-block__title">Изображения</h2>
+        <h3 class="lib-block__paragraph">Картинки-миниатюры</h3>
         <p class="lib-block__name">.класс</p>
         <p class="lib-block__description">Описание</p>
         <button class="lib-block__spoiler" type="button">Пример</button>

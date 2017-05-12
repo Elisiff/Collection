@@ -1,5 +1,7 @@
 var subitems = document.querySelector(".drop-down-nav__subitems");
 
+subitems.classList.remove("drop-down-nav__subitems--nojs");
+
 if (subitems !== null) {
   subitems.addEventListener("mouseover", function() {
     if (subitems.classList.contains("drop-down-nav__subitems--closed")) {
