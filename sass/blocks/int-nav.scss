@@ -1,0 +1,208 @@
+.int-nav {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.3);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.int-nav__opener {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 23px 20px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.int-nav__toggle {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 24px;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.int-nav--closed .int-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: $bg-white;
+    box-shadow: 0 10px 0 0 $bg-white,
+                0 20px 0 0 $bg-white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 1px;
+    width: 48px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.3);
+    box-shadow: 0 15px 0 0 rgba(255,255,255,0.3);
+  }
+}
+
+.int-nav--closed .int-nav__toggle:hover {
+  &::before {
+    background-color: $bg-pink;
+    box-shadow: 0 10px 0 0 $bg-pink,
+                0 20px 0 0 $bg-pink;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.int-nav--closed .int-nav__toggle:active {
+  &::before {
+    background-color: rgba(210, 40, 86, 0.3);
+    box-shadow: 0 10px 0 0 rgba(210, 40, 86, 0.3),
+                0 20px 0 0 rgba(210, 40, 86, 0.3);
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.int-nav--opened {
+  background-color: $bg-nav;
+}
+
+.int-nav--opened .int-nav__opener {
+  justify-content: flex-end;
+}
+
+.int-nav--opened .int-nav__toggle {
+  width: 30px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 30px;
+    height: 5px;
+    background-color: $bg-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+
+    &:hover {
+      background-color: $bg-pink;
+    }
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+
+    &:hover {
+      background-color: $bg-pink;
+    }
+  }
+}
+
+.int-nav--opened .int-nav__toggle:hover {
+  &::before,
+  &::after {
+    background-color: $bg-pink;
+  }
+}
+
+.int-nav--opened .int-nav__toggle:active {
+  &::before,
+  &::after {
+    background-color: #5b324a;
+  }
+}
+
+.int-nav--closed .int-nav__items {
+    display: none;
+}
+
+.int-nav--nojs {
+  background-color: $bg-nav;
+
+  .int-nav__toggle {
+    display: none;
+  }
+
+  .int-nav__items {
+    display: block;
+  }
+}
+
+.int-nav__items {
+  z-index: 10;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @include text(700, normal, 18px, 32px, $text-white);
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.int-nav__item {
+  padding: 16px 20px 14px 20px;
+  background-color: $bg-nav;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid #000000;
+  text-decoration: none;
+
+  &:first-child {
+    box-shadow: 0 -1px 0 #000000;
+  }
+
+  a:link {
+    @include text(700, normal, 18px, 32px, $text-white);
+    text-decoration: none;
+  }
+
+  a:visited {
+    @include text(700, normal, 18px, 32px, $text-white);
+    text-decoration: none;
+  }
+}
+
+.int-nav--opened, .int-nav--nojs {
+  a:hover {
+    @include text(700, normal, 18px, 32px, $text-pink);
+    cursor: pointer;
+  }
+
+  a:active {
+    @include text(700, normal, 18px, 32px, rgba(210, 40, 86, 0.3));
+    cursor: pointer;
+  }
+}
+
+.int-nav__item--active {
+  a:hover {
+    @include text(700, normal, 18px, 32px, $text-white);
+    cursor: auto;
+  }
+
+  a:active {
+    @include text(700, normal, 18px, 32px, $text-white);
+    cursor: auto;
+  }
+}
+

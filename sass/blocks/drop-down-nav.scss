@@ -1,0 +1,112 @@
+.drop-down-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  margin: 0 auto;
+  background-color: $bg-nav;
+}
+
+.drop-down-nav__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  @include text(400, normal, 18px, 18px, $text-white);
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.drop-down-nav__item {
+  position: relative;
+  padding: 18px 50px 13px 50px;
+
+  a:link {
+    @include text(400, normal, 18px, 18px, $text-white);
+    text-decoration: none;
+  }
+
+  a:visited {
+    @include text(400, normal, 18px, 18px, $text-white);
+    text-decoration: none;
+  }
+}
+
+.drop-down-nav {
+  a:hover {
+    @include text(400, normal, 18px, 18px, $text-pink);
+    cursor: pointer;
+  }
+
+  a:active {
+    @include text(400, normal, 18px, 18px, rgba(255, 255, 255, 0.3));
+    cursor: pointer;
+  }
+}
+
+.drop-down-nav__item--active a {
+  display: block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid $bg-white;
+  cursor: auto;
+
+  &:hover, &:active {
+    @include text(400, normal, 18px, 18px, $text-pink);
+    border-bottom: 2px solid $bg-pink;
+    cursor: auto;
+  }
+}
+
+.drop-down-nav__subitems {
+  position: absolute;
+  content: "";
+  width: auto;
+  height: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  top: 40px;
+  left: 80px;
+  z-index: 10;
+  @include text(400, normal, 18px, 18px, $text-black);
+  list-style: none;
+  text-align: left;
+  background-color: $bg-pink;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.75);
+}
+
+.drop-down-nav__subitem {
+  padding: 10px;
+
+  &:first-child {
+    padding-top: 20px;
+  }
+
+  &:last-child {
+    padding-bottom: 20px;
+  }
+
+  a:hover {
+    @include text(400, normal, 18px, 18px, rgba(255, 255, 255, 0.3));
+  }
+
+  a:active {
+    @include text(400, normal, 18px, 18px, $text-gray);
+  }
+}
+
+.drop-down-nav__subitems--closed {
+  display: none;
+}
+
+.drop-down-nav__subitems--opened {
+  display: flex;
+}
+
+.drop-down-nav__submenu:hover .drop-down-nav__subitems {
+    display: flex;
+}

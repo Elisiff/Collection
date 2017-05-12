@@ -185,16 +185,50 @@
 <!-- Основная навигация -->
       <section class="lib-block">
         <h2 class="lib-block__title">Основная навигация</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
-        <p class="lib-block__name">.класс</p>
+        <h3 class="lib-block__paragraph">Интерактивное меню</h3>
+        <p class="lib-block__name">.int-nav</p>
+        <p class="lib-block__description">Js вешается на основной контейнер, внутри которого меняется первая строка, кнопка-переключатель, и показывается или скрывается список меню в зависимости от состояния.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- int-nav -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <nav class="int-nav  int-nav--closed  int-nav--nojs">
+            <div class="int-nav__opener">
+              <button type="button" class="int-nav__toggle">
+                Открыть меню
+              </button>
+            </div>
+            <ul class="int-nav__items">
+              <li class="int-nav__item  int-nav__item--active"><a>Главная</a></li>
+              <li class="int-nav__item"><a href="#">Фотографии</a></li>
+              <li class="int-nav__item"><a href="#">Отзывы</a></li>
+              <li class="int-nav__item"><a href="https://htmlacademy.ru/">Академия</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <h3 class="lib-block__paragraph">Выпадающее меню</h3>
+        <p class="lib-block__name">.drop-down-nav</p>
         <p class="lib-block__description">Описание</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+        <!-- drop-down-nav -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
-
-          </div>
+          <nav class="drop-down-nav">
+            <ul class="drop-down-nav__items">
+              <li class="drop-down-nav__item  drop-down-nav__item--active"><a>Главная</a></li>
+              <li class="drop-down-nav__item"><a href="#">Фотографии</a></li>
+              <li class="drop-down-nav__item"><a href="#">Отзывы</a></li>
+              <li class="drop-down-nav__item  drop-down-nav__submenu"><a href="#">О компании</a>
+                <ul class="drop-down-nav__subitems  drop-down-nav__subitems--closed">
+                  <li class="drop-down-nav__subitem"><a href="#">История</a></li>
+                  <li class="drop-down-nav__subitem"><a href="#">Акции</a></li>
+                  <li class="drop-down-nav__subitem"><a href="#">Местоположение</a></li>
+                </ul>
+              </li>
+              <li class="drop-down-nav__item"><a href="https://htmlacademy.ru/">Академия</a></li>
+            </ul>
+          </nav>
         </div>
       </section>
 

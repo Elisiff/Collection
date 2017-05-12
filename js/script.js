@@ -1,3 +1,40 @@
+var subitems = document.querySelector(".drop-down-nav__subitems");
+
+if (subitems !== null) {
+  subitems.addEventListener("mouseover", function() {
+    if (subitems.classList.contains("drop-down-nav__subitems--closed")) {
+      subitems.classList.remove("drop-down-nav__subitems--closed");
+      subitems.classList.add("drop-down-nav__subitems--opened");
+    }
+  });
+}
+
+if (subitems !== null) {
+  subitems.addEventListener("mouseout", function() {
+    if (subitems.classList.contains("drop-down-nav__subitems--opened")) {
+      subitems.classList.remove("drop-down-nav__subitems--opened");
+      subitems.classList.add("drop-down-nav__subitems--closed");
+    }
+  });
+}
+
+var navMain = document.querySelector(".int-nav");
+var navToggle = document.querySelector(".int-nav__toggle");
+
+navMain.classList.remove("int-nav--nojs");
+
+if (navToggle !== null) {
+  navToggle.addEventListener("click", function() {
+    if (navMain.classList.contains("int-nav--closed")) {
+      navMain.classList.remove("int-nav--closed");
+      navMain.classList.add("int-nav--opened");
+    } else {
+      navMain.classList.add("int-nav--closed");
+      navMain.classList.remove("int-nav--opened");
+    }
+  });
+}
+
 var spoiler = document.querySelectorAll(".lib-block__spoiler");
 var example = document.querySelectorAll(".lib-block__example");
 
