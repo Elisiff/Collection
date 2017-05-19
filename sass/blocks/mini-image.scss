@@ -1,0 +1,78 @@
+.mini-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-image__dragon {
+  border: 3px solid $text-white;
+  box-shadow: 2px 2px 20px 3px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.mini-image__dragon-big {
+  position: fixed;
+  content: "";
+  top: 5%;
+  left: center;
+  width: 1200px;
+  height: 800px;
+  z-index: 20;
+}
+
+.mini-image__dragon-big--opened {
+  display: block;
+}
+
+.mini-image__dragon-big--closed {
+  display: none;
+}
+
+.mini-image__cross {
+  position: relative;
+  display: block;
+  font-size: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    height: 5px;
+    z-index: 20;
+    background-color: $bg-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &::before, &::after {
+      background-color: $bg-pink;
+    }
+  }
+}
+
+.mini-image__cross--opened {
+  display: block;
+}
+
+.mini-image__cross--closed {
+  display: none;
+}

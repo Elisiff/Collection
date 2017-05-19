@@ -1,0 +1,55 @@
+.retina {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.retina__background {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  background-color: #E7E7E7;
+  background-image: url("../img/dragon-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .retina__background {
+    background-image: url("../img/dragon-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+}
+
+@media print, (min-width: 660px) {
+  .retina__background {
+    width: 600px;
+    height: 400px;
+    background-image: url("../img/dragon-tablet@1x.jpg");
+    background-size: 100% auto;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .retina__background {
+      background-image: url("../img/dragon-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
+  }
+}
+
+@media print, (min-width: 960px) {
+  .retina__background {
+    width: 1200px;
+    height: 800px;
+    background-image: url("../img/dragon-desktop@1x.jpg");
+    background-size: 100% auto;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .retina__background {
+      background-image: url("../img/dragon-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
+  }
+}

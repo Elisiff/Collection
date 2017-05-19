@@ -121,6 +121,18 @@
             </div>
           </div>
         </div>
+
+        <h3 class="lib-block__paragraph">Вкладки</h3>
+        <p class="lib-block__name">.класс</p>
+        <p class="lib-block__description">Описание</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+        <!-- класс -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <div class=".класс">
+
+          </div>
+        </div>
       </section>
 
 <!-- Фигуры, нарисованные с помощью CSS -->
@@ -264,35 +276,59 @@
         </div>
       </section>
 
-      <!-- Изображения -->
+<!-- Изображения -->
       <section class="lib-block">
         <h2 class="lib-block__title">Изображения</h2>
-        <h3 class="lib-block__paragraph">Картинки-миниатюры</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
+        <h3 class="lib-block__paragraph">Картинка-миниатюра</h3>
+        <p class="lib-block__name">.mini-image .overlay</p>
+        <p class="lib-block__description">После клика по миниатюре срабатывает js: открываются большое изображение, крестик, оверлей. Закрыть большую картинку можно по клику по оверлею или крестику.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+<!-- mini-image, overlay -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
+          <div class="mini-image">
+            <img class="mini-image__dragon" src="img/dragon.jpg" alt="Дракон" width="300" height="200">
+            <img class="mini-image__dragon-big  mini-image__dragon-big--closed" src="img/dragon.jpg" alt="Дракон" width="1200" height="800">
+            <button type="button" class="mini-image__cross  mini-image__cross--closed">Закрыть
+            </button>
+          </div>
 
+          <div class="overlay  overlay--closed"></div>
+        </div>
+
+        <h3 class="lib-block__paragraph">Ретиновые и адаптивные изображения</h3>
+        <p class="lib-block__name">.retina</p>
+        <p class="lib-block__description">Первое изображение вставлено с помощью тега <code>&lt;picture&gt;</code> в html-разметку. Второе является фоном пустого блока. Оба изображения ретиновые и адаптивные (три брейкпоинта: мобильная, планшетная и десктопная версии), внешне ничем не отличаются.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- retina -->
+        <div class="lib-block__example  lib-block__example--closed">
+
+          <div class="retina">
+
+            <!-- Встроенное изображение -->
+            <picture class="retina__inline">
+              <source media="(min-width: 960px)" srcset="img/dragon-desktop@1x.jpg 1x, img/dragon-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/dragon-tablet@1x.jpg 1x, img/dragon-tablet@2x.jpg 2x">
+              <img src="img/dragon-mobile@1x.jpg" srcset="img/dragon-mobile@2x.jpg 2x" alt="Дракон">
+            </picture>
+
+            <!-- Фоновое изображение -->
+            <div class="retina__background"></div>
           </div>
         </div>
-      </section>
 
-
-      <!-- Вкладки -->
-      <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
+        <h3 class="lib-block__paragraph">Иконки социальных сетей</h3>
+        <p class="lib-block__name">.social</p>
+        <p class="lib-block__description">Задан общий стиль для всех иконок и отдельное изображение в формате svg для каждой. Для передачи активного состояния указываются другие svg-изображения, в которых изменен цвет.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+<!-- social -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
-
+          <div class="social">
+            <a href="#" class="social__btn  social__btn--tw">Twitter</a>
+            <a href="#" class="social__btn  social__btn--fb">Facebook</a>
+            <a href="#" class="social__btn  social__btn--youtube">Youtube</a>
           </div>
         </div>
       </section>
