@@ -123,14 +123,41 @@
         </div>
 
         <h3 class="lib-block__paragraph">Вкладки</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
+        <p class="lib-block__name">.tabs</p>
+        <p class="lib-block__description">Этот блок сделан на чистом CSS по принципу слайдера — вкладки (<code>display: inline-block</code>, пробелы между элементами удалены в html-разметке) являются лейблами переключателей, каждый из которых привязан к определенному текстовому блоку.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+<!-- tabs -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
+          <div class="tabs">
 
+            <input class="tabs__btn" type="radio" id="tabs-btn-1" name="tabs-control" checked>
+            <input class="tabs__btn" type="radio" id="tabs-btn-2" name="tabs-control">
+            <input class="tabs__btn" type="radio" id="tabs-btn-3" name="tabs-control">
+            <input class="tabs__btn" type="radio" id="tabs-btn-4" name="tabs-control">
+
+            <label class="tabs__toggle  tabs__toggle-1" for="tabs-btn-1">Вкладка 1</label
+            ><label class="tabs__toggle  tabs__toggle-2" for="tabs-btn-2">Вкладка 2</label
+            ><label class="tabs__toggle  tabs__toggle-3" for="tabs-btn-3">Вкладка 3</label
+            ><label class="tabs__toggle  tabs__toggle-4" for="tabs-btn-4">Вкладка 4</label>
+
+            <div class="tabs__post  tabs__post-1">
+              <p class="tabs__post-message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            </div>
+            <div class="tabs__post  tabs__post-2">
+              <p class="tabs__post-message">Соседи будут рады!</p>
+            </div>
+            <div class="tabs__post  tabs__post-3">
+              <p class="tabs__post-message">
+                Завтра наступит зима,<br>
+                землю застелет пурга,<br>
+                окна покроет мороз,<br>
+                сотканный из миллиона слез.</p>
+            </div>
+            <div class="tabs__post  tabs__post-4">
+              <p class="tabs__post-message">А что подумал по этому поводу Кролик, никто так и не узнал, потому что Кролик был очень воспитанный.</p>
+              <cite class="tabs__post-author">Алан Александр Милн <q>Винни-Пух и все-все-все</q></cite>
+            </div>
           </div>
         </div>
       </section>

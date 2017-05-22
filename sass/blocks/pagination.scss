@@ -5,6 +5,8 @@
 
 .pagination__item {
   display: block;
+  margin-bottom: -1px; // убираем границу снизу, когда страницы выстраиваются в 2 ряда
+  margin-right: -1px;  // убираем границы справа
   padding: 10px;
   min-width: 50px;
   border: 1px solid $text-lgray;
@@ -12,9 +14,10 @@
   text-align: center;
   color: $text-black;
 
-  & + & {
-    border-left: 0;
-  }
+  // Ненадежный способ, при уменьшении экрана вылазят задвоенные и пустые границы
+  // & + & {
+  //   border-left: 0;
+  // }
 
   &:hover,
   &:focus {
