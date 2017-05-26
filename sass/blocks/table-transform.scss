@@ -1,0 +1,207 @@
+.table-transform {
+  max-width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+.table-transform__btn {
+  display: none;
+}
+
+.table-transform__table {
+  width: 834px;
+  margin: 0 -40px;
+  border-collapse: collapse;
+  transform: translateX(-238px);
+}
+
+.table-transform__options {
+  display: none;
+}
+
+.table-transform__package {
+  width: 138px;
+  padding: 17px 68px 20px 68px;
+  text-align: center;
+  background-color: $bg-nav;
+  border-right: 2px solid $bg-gray;
+  border-left: 2px solid $bg-gray;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.table-transform__package-title {
+  @include text(700, normal, 18px, 30px, $text-white);
+  text-transform: uppercase;
+}
+
+.table-transform__package-price {
+  margin: 0;
+  margin-top: 2px;
+  @include text(400, italic, 24px, 30px, $text-white);
+}
+
+.table-transform__condition {
+  padding: 15px 16px 14px 21px;
+  @include text(400, normal, 14px, 30px, $text-gray);
+  text-transform: uppercase;
+  background-color: $bg-white;
+  border: 2px solid $bg-gray;
+
+  span {
+    display: block;
+    width: 140px;
+  }
+}
+
+.table-transform__icon {
+  padding: 11px 1px 14px 22px;
+  background-color: $bg-white;
+  border: 2px solid $bg-gray;
+}
+
+.table-transform__logo {
+  display: block;
+  padding-top: 3px;
+}
+
+#table-transform__btn-1:checked~.table-transform__table {
+  transform: translateX(39px);
+}
+
+#table-transform__btn-2:checked~.table-transform__table {
+  transform: translateX(-243px);
+}
+
+#table-transform__btn-3:checked~.table-transform__table {
+  transform: translateX(-525px);
+}
+
+.table-transform__slider-controls {
+  position: relative;
+  text-align: center;
+  margin-top: 43px;
+}
+
+.table-transform__slider-control {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 15px;
+  vertical-align: top;
+  background-color: #bec2c7;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+#table-transform__btn-1:checked~.table-transform__slider-controls .table-transform__slider-control:first-child {
+  background-color: $bg-white;
+  box-shadow: 0 0 0 3px $bg-nav;
+}
+
+#table-transform__btn-2:checked~.table-transform__slider-controls .table-transform__slider-control:nth-child(2) {
+  background-color: $bg-white;
+  box-shadow: 0 0 0 3px $bg-nav;
+}
+
+#table-transform__btn-3:checked~.table-transform__slider-controls .table-transform__slider-control:nth-child(3) {
+  background-color: $bg-white;
+  box-shadow: 0 0 0 3px $bg-nav;
+}
+
+@media print, (min-width: 830px) {
+  .table-transform {
+    max-width: 660px;
+  }
+
+  .table-transform__slider-controls {
+    display: none;
+  }
+
+  .table-transform__table {
+    width: 620px;
+    margin: 0;
+    margin-left: -20px;
+    border-collapse: collapse;
+    transform: none;
+    overflow: visible;
+  }
+
+  .table-transform__options {
+    display: table-cell;
+    width: 155px;
+    padding: 6px 0 8px 16px;
+    border: 2px solid $bg-gray;
+    background-color: #ffffff;
+    @include text(400, normal, 14px, 30px, $text-gray);
+
+    &--hidden {
+      font-size: 0;
+      background-color: $bg-exgray;
+      border: none;
+    }
+  }
+
+  #table-transform__btn-1:checked~.table-transform__table {
+    transform: none;
+  }
+
+  #table-transform__btn-2:checked~.table-transform__table {
+    transform: none;
+  }
+
+  #table-transform__btn-3:checked~.table-transform__table {
+    transform: none;
+  }
+
+  .table-transform__package {
+    width: 155px;
+    padding: 10px 0 9px 0;
+    border-left: none;
+    border-right: 2px solid $bg-gray;
+
+    &:last-child {
+      border-right: 2px solid $bg-nav;
+    }
+  }
+
+  .table-transform__package-price {
+    padding: 0;
+    margin-top: 0;
+    @include text(400, italic, 18px, 30px, $text-white);
+  }
+
+  .table-transform__package-title {
+    @include text(700, normal, 16px, 30px, $text-white);
+  }
+
+  .table-transform__condition {
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    border: none;
+
+    span {
+      display: none;
+    }
+  }
+
+  .table-transform__icon {
+    width: 155px;
+    padding: 0;
+    border-left: none;
+    border-right: 2px solid $bg-gray;
+    border-bottom: 2px solid $bg-gray;
+  }
+
+  .table-transform__logo {
+    margin-left: 62px;
+  }
+}

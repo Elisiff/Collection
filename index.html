@@ -425,14 +425,92 @@
 
         <h3 class="lib-block__paragraph">Таблица-трансформер</h3>
         <p class="lib-block__name">.table-transform</p>
-        <p class="lib-block__description">На мобильной версии это слайдер, который показывает части таблицы, на планшетной и десктопной — полноценная таблица.</p>
+        <p class="lib-block__description">На мобильной версии это слайдер, который показывает части таблицы, на планшетной и десктопной — полноценная таблица. Пустую ячейку отметили модификатором <code>--hidden</code>. Ячейкам, которые скрыты на какой-либо из версий, задали свой специальный класс. Значение брейкпоинта выше, т.к. учитываются отступы блока с примером и всей страницы.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
 <!-- table-transform -->
         <div class="lib-block__example  lib-block__example--closed">
           <div class="table-transform">
-            <div class="table-transform__container">
+            <input class="table-transform__btn" type="radio" id="table-transform__btn-1" name="table-transform-toggle">
+            <input class="table-transform__btn" type="radio" id="table-transform__btn-2" name="table-transform-toggle" checked>
+            <input class="table-transform__btn" type="radio" id="table-transform__btn-3" name="table-transform-toggle">
 
+            <table class="table-transform__table">
+              <tr>
+                <td class="table-transform__options  table-transform__options--hidden"></td>
+                <td class="table-transform__package" colspan="2">
+                  <b class="table-transform__package-title">База</b>
+                  <p class="table-transform__package-price">1,99 USD</p>
+                </td>
+                <td class="table-transform__package" colspan="2">
+                  <b class="table-transform__package-title">Стандарт</b>
+                  <p class="table-transform__package-price">3,99 USD</p>
+                </td>
+                <td class="table-transform__package" colspan="2">
+                  <b class="table-transform__package-title">Анлим</b>
+                  <p class="table-transform__package-price">9,99 USD</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="table-transform__options">Розовый фильтр</td>
+                <td class="table-transform__condition">
+                  <span>Розовый фильтр</span></td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+                <td class="table-transform__condition">
+                  Розовый фильтр</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+                <td class="table-transform__condition">
+                  Розовый фильтр</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+              </tr>
+              <tr>
+                <td class="table-transform__options">Смайлики</td>
+                <td class="table-transform__condition">
+                  Смайлики</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-no.svg" alt="Нет" class="table-transform__logo" width="27" height="26">
+                </td>
+                <td class="table-transform__condition">
+                  Смайлики</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+                <td class="table-transform__condition">
+                  Смайлики</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+              </tr>
+              <tr>
+                <td class="table-transform__options">Комментарии</td>
+                <td class="table-transform__condition">
+                  Комментарии</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-no.svg" alt="Нет" class="table-transform__logo" width="27" height="26">
+                </td>
+                <td class="table-transform__condition">
+                  Комментарии</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-no.svg" alt="Нет" class="table-transform__logo" width="27" height="26">
+                </td>
+                <td class="table-transform__condition">
+                  Комментарии</td>
+                <td class="table-transform__icon">
+                  <img src="img/icon-yes.svg" alt="Да" class="table-transform__logo" width="31" height="21">
+                </td>
+              </tr>
+            </table>
+
+            <div class="table-transform__slider-controls">
+              <label class="table-transform__slider-control" for="table-transform__btn-1"></label>
+              <label class="table-transform__slider-control" for="table-transform__btn-2"></label>
+              <label class="table-transform__slider-control" for="table-transform__btn-3"></label>
             </div>
           </div>
         </div>
