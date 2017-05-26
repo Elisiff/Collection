@@ -15,14 +15,14 @@
   background-size: 100% auto;
 }
 
-@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+@media #{$retina} {
   .retina__background {
     background-image: url("../img/dragon-mobile@2x.jpg");
     background-size: 100% auto;
   }
 }
 
-@media print, (min-width: 660px) {
+@media print, #{$tablet-width} {
   .retina__background {
     width: 600px;
     height: 400px;
@@ -30,7 +30,7 @@
     background-size: 100% auto;
   }
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media #{$retina} {
     .retina__background {
       background-image: url("../img/dragon-tablet@2x.jpg");
       background-size: 100% auto;
@@ -38,7 +38,7 @@
   }
 }
 
-@media print, (min-width: 960px) {
+@media print, #{$desktop-width} {
   .retina__background {
     width: 1200px;
     height: 800px;
@@ -46,7 +46,7 @@
     background-size: 100% auto;
   }
 
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  @media #{$retina} {
     .retina__background {
       background-image: url("../img/dragon-desktop@2x.jpg");
       background-size: 100% auto;

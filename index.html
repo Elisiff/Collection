@@ -361,18 +361,79 @@
       </section>
 
 
-      <!-- Таблицы -->
+<!-- Таблицы -->
       <section class="lib-block">
-        <h2 class="lib-block__title">Название</h2>
-        <h3 class="lib-block__paragraph">Пункт</h3>
-        <p class="lib-block__name">.класс</p>
-        <p class="lib-block__description">Описание</p>
+        <h2 class="lib-block__title">Таблицы</h2>
+        <h3 class="lib-block__paragraph">Таблица со скроллом на малых вьюпортах</h3>
+        <p class="lib-block__name">.table-scroll</p>
+        <p class="lib-block__description">В разметке использованы группировочные элементы таблицы. Помните, если <code>&lt;tbody&gt;</code> явно не задан, то браузер все равно прописывает его пустым. Для того, чтобы появлялся скролл, таблицу обарачивают в <code>&lt;div&gt;</code>, на котором висит свойство <code>overflow-x: auto</code> вкупе со 100% шириной. Четные и нечетные строки тела таблицы окрашиваются в разный цвет.</p>
         <button class="lib-block__spoiler" type="button">Пример</button>
 
-        <!-- класс -->
+<!-- table-scroll -->
         <div class="lib-block__example  lib-block__example--closed">
-          <div class=".класс">
+          <div class="table-scroll">
+            <table class="table-scroll__table">
+              <thead class="table-scroll__header">
+                <tr>
+                  <th>Имя</th>
+                  <th>Прозвище</th>
+                  <th>Характеристика</th>
+                  <th>Семейное положение</th>
+                  <th>Место проживания</th>
+                </tr>
+              </thead>
 
+              <tbody class="table-scroll__body">
+                <tr>
+                  <td>Иннокентий</td>
+                  <td>Ктулху</td>
+                  <td>Вспыльчив, груб, любимец женщин</td>
+                  <td>Все сложно</td>
+                  <td>Земли Хаоса</td>
+                </tr>
+                <tr>
+                  <td>Вениамин</td>
+                  <td>Пират</td>
+                  <td>Энергичен, балагур</td>
+                  <td>Свободен</td>
+                  <td>Морские просторы</td>
+                </tr>
+                <tr>
+                  <td>Вячеслав</td>
+                  <td>Святоша</td>
+                  <td>Набожен, смиренен</td>
+                  <td>Не имеет значения</td>
+                  <td>Обитель божья</td>
+                </tr>
+                <tr>
+                  <td>Румпельштильцхен</td>
+                  <td>Фанат фэнтези (ФФ)</td>
+                  <td>Непредсказуем</td>
+                  <td>Вдовец</td>
+                  <td>Сказочный мир</td>
+                </tr>
+              </tbody>
+
+              <tfoot class="table-scroll__footer">
+                <tr>
+                  <td colspan="5">Итого: четверо опрошенных, все незаурядные личности.</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <h3 class="lib-block__paragraph">Таблица-трансформер</h3>
+        <p class="lib-block__name">.table-transform</p>
+        <p class="lib-block__description">На мобильной версии это слайдер, который показывает части таблицы, на планшетной и десктопной — полноценная таблица.</p>
+        <button class="lib-block__spoiler" type="button">Пример</button>
+
+<!-- table-transform -->
+        <div class="lib-block__example  lib-block__example--closed">
+          <div class="table-transform">
+            <div class="table-transform__container">
+
+            </div>
           </div>
         </div>
       </section>

@@ -1249,6 +1249,31 @@ code {
   .social__btn:active {
     border: 2px solid rgba(40, 54, 69, 0.1); }
 
+.table-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff; }
+
+.table-scroll__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left; }
+
+.table-scroll__header,
+.table-scroll__footer {
+  background-color: #e7e7e7; }
+
+th, td {
+  padding: 5px;
+  border: 1px solid #283645; }
+
+.table-scroll__body tr:nth-of-type(odd) {
+  background-color: #ffffff; }
+
+.table-scroll__body tr:nth-of-type(even) {
+  background-color: pink; }
+
 .page-footer {
   padding: 40px 0 20px 0; }
 

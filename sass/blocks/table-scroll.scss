@@ -1,0 +1,37 @@
+.table-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  background-color: $bg-white;
+}
+
+.table-scroll__table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-scroll__header,
+.table-scroll__footer {
+  background-color: $bg-exgray;
+}
+
+th, td {
+  padding: 5px;
+  border: 1px solid $bg-nav;
+}
+
+// Фон у четных и нечетных строк в теле таблицы
+.table-scroll__body {
+
+  & tr:nth-of-type(odd) {
+    background-color: $bg-white;
+  }
+}
+
+.table-scroll__body {
+
+  & tr:nth-of-type(even) {
+    background-color: pink;
+  }
+}
