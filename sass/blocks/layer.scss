@@ -1,0 +1,23 @@
+.layer {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  margin: 60px 0 20px 20px;
+  border: 13px solid $bg-pink;
+  border-radius: 50%;
+  @include text(700, normal, 96px, 165px, $text-pink);
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -82px;
+    left: -44px;
+    width: 238px;
+    height: 276px;
+    z-index: 10;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+  }
+}

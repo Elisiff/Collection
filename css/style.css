@@ -1249,6 +1249,31 @@ code {
   .social__btn:active {
     border: 2px solid rgba(40, 54, 69, 0.1); }
 
+.layer {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  margin: 60px 0 20px 20px;
+  border: 13px solid #d22856;
+  border-radius: 50%;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 96px;
+  line-height: 165px;
+  color: #d22856;
+  text-align: center; }
+  .layer::before {
+    content: "";
+    position: absolute;
+    top: -82px;
+    left: -44px;
+    width: 238px;
+    height: 276px;
+    z-index: 10;
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px 276px; }
+
 .table-scroll {
   display: block;
   width: 100%;
